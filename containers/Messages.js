@@ -5,7 +5,7 @@ const socket = io('http://localhost:3000');
 
 class Messages extends React.Component {
 
-  componentDidUpdate() {
+  componentDidMount() {
     socket.on('new message', (msg) => {
       this.props.newMessage(msg.message);
     })
@@ -13,8 +13,8 @@ class Messages extends React.Component {
 
   render() {
     return (
-      <div className="_34DWRdTICEzdUS53QtLFbO">
-        <div className="_2YdldZNikRFEVrvPMAo1ER"></div>
+      <div className="messages">
+        <div className="messages-content"></div>
           <Sender history={this.props.history}/>
       </div>
     )

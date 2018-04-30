@@ -15,14 +15,14 @@ class MsgBox extends React.Component {
 
   render() {
     return (
-      <form className="_398D7-fSqgH_XeAKWxBd8O" onSubmit={this.sendMsg}>
+      <form className="message-box" onSubmit={this.sendMsg}>
         <textarea
           type="text"
           ref={this.message}
-          className="_1uwo7Uo6XjOv7PKHLcATNn"
+          className="message-input"
           placeholder="Type message...">
         </textarea>
-        <button type="submit" className="_36YPT2Qt0SLA-jXErsF_pB">Send</button>
+        <button type="submit" className="message-submit">Send</button>
       </form>
     )
 	}

@@ -36,7 +36,7 @@ class App extends React.Component {
     render () {
       const { sendMessage, state } = this;
       return (
-        <div className="_1MY_CHFF71MDeQ3DBwIisL">
+        <div className="chat">
           <ChatTitle />
           <Messages history={ state.history } newMessage={this.newMessage}/>
           <MsgBox
