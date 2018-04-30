@@ -8,9 +8,6 @@ class MsgBox extends React.Component {
   sendMsg = (event) => {
     event.preventDefault();
     socket.emit('new message', this.message.current.value);
-    const text = {
-      data: this.message.current.value,
-    };
   };
 
   render() {

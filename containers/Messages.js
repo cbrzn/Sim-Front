@@ -1,13 +1,13 @@
 import React from "react";
 import Sender from "./Sender";
 import io from 'socket.io-client';
-const socket = io('http://localhost:3000');
 
 class Messages extends React.Component {
 
   componentDidMount() {
+    const { socket, newMessage } = this.props;
     socket.on('new message', (msg) => {
-      this.props.newMessage(msg.message);
+      newMessage(msg.message);
     })
   }
 

@@ -22,7 +22,6 @@ class App extends React.Component {
     this.setState({ history });
     }
     state = {
-        socket: null,
         history: [],
     };
 
@@ -30,7 +29,6 @@ class App extends React.Component {
       socket.on('connect', () => {
         console.log('connected');
       })
-      this.setState({ socket })
     }
 
     render () {
@@ -38,9 +36,9 @@ class App extends React.Component {
       return (
         <div className="chat">
           <ChatTitle />
-          <Messages history={ state.history } newMessage={this.newMessage}/>
+          <Messages history={ state.history } newMessage={ this.newMessage } socket={ socket }/>
           <MsgBox
-            newMessage={this.newMessage}
+            newMessage={ this.newMessage } socket={ socket }
            />
         </div>
       )
